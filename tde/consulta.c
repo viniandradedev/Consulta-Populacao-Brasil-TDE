@@ -33,30 +33,13 @@ int main(void) {
     }
     int ano1;
     int ano2;
-    printf("\n\nConsulte as estatisticas oficiais do IBGE a respeito da populacao do Brasil!\n");
-    // loop para solicitar
-    while (1)
-    {
-        printf("\nInforme o ano do inicio do periodo (2010-2060): ");
-        scanf("%d", &ano1);
-        while (getchar() != '\n');
-        printf("Informe o ano do final do periodo (%d-2060): ", ano1);
-        scanf("%d", &ano2);
-        while (getchar() != '\n');
-        if (ano1 <= 2060 && ano1 >= 2010 && ano2 <= 2060 && ano2 > ano1)
-        {
-            break;
-        }
-        else
-        {
-            printf("Intervalo invalido\n");
-        }
-    }
 
     // menu
     printf("\n************* MENU *************\n");
     printf("** CONSULTA POPULACIONAL IBGE **\n");
     printf("********************************\n");
+
+    printf("\nConsulte as estatisticas oficiais do IBGE a respeito da populacao do Brasil!\n");
 
     // opcoes
     int opcao;
@@ -72,6 +55,24 @@ int main(void) {
         else 
         {
             printf("Opcao invalida\n");
+        }
+    }
+        // loop para solicitar
+    while (1)
+    {
+        printf("\nInforme o ano do inicio do periodo (2010-2060): ");
+        scanf("%d", &ano1);
+        while (getchar() != '\n');
+        printf("Informe o ano do final do periodo (%d-2060): ", ano1);
+        scanf("%d", &ano2);
+        while (getchar() != '\n');
+        if (ano1 <= 2060 && ano1 >= 2010 && ano2 <= 2060 && ano2 >= ano1)
+        {
+            break;
+        }
+        else
+        {
+            printf("Intervalo invalido\n");
         }
     }
     
